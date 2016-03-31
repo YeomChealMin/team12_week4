@@ -12,6 +12,4 @@ public class Calculator
 		// do not create App class directly test2
 	}
 	
-    	}
-    }
 }
