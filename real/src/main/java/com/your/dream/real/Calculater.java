@@ -7,7 +7,7 @@ package com.your.dream.real;
 public class Calculator 
 {
 	
-	private Calculator()
+	public Calculator()
 	{
 		// do not create App class directly test2
 	}
