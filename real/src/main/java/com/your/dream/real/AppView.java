@@ -21,13 +21,9 @@ public class AppView {
 		
 		
 		while(true){
-			try{
 				iReturn = 1;
 				break;
-			} catch(Exception e){
-				insertplan.append("Please input correctly(num[1 or 2]): ");
-				Logger.error(TAG,e.getMessage());
-			}
+		
 		}
 			MYLOG.log(Level.INFO, insertplan.toString());
 
@@ -40,13 +36,9 @@ public class AppView {
 		insertut.append("How much using time?(unit: minute): 1000");
 
 		while(true){
-			try{
 				iReturn = 1000;
 				break;
-			} catch(Exception e){
-				insertut.append("Please input Using-Time with number(unit: minute): ");
-				Logger.error(TAG,e.getMessage());
-			}
+		
 		}
 				MYLOG.log(Level.INFO, insertut.toString());
 
@@ -59,13 +51,10 @@ public class AppView {
 		insertul.append("What's your using Line?");
 		
 		while(true){
-			try{
+		
 				iReturn = 1;
 				break;
-			} catch(Exception e){
-				insertul.append("Please input correctly Using-Line with number: ");
-				Logger.error(TAG,e.getMessage());
-			}
+		
 		}
 			MYLOG.log(Level.INFO, insertul.toString());
 
