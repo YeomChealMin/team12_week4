@@ -1,40 +1,44 @@
 package com.your.dream.real;
 public class Gold implements BasicPlan	{
 
-	float cost;
-	float discount_cost;
-	int family_cost;
-	int number;
-	float time;
+	final String PLAN="Gold";
+	final double BASIC_FEE=49.95;
+	final double ADDITIONAL_FEE=14.5;
+	final double FREE_TIME=1000;
+	final double EXCESS_FEE=0.45;
+	private double minit;
+	private double line;
 	
-	public void cost_setter(float i) {
-		// TODO Auto-generated method stub
-		cost = i;
+	public Gold(double aMinit, double aLine){
+		this.minit = aMinit;
+		this.line = aLine;
 	}
 	@Override
-	public float cost_getter() {
-		// TODO Auto-generated method stub
-		return cost;
+	public String plan() {
+		return this.PLAN;
 	}
 	@Override
-	public void discount_cost_setter(float i) {
-		// TODO Auto-generated method stub
-		discount_cost= i;
+	public double BASIC_FEE() {
+		return this.BASIC_FEE;
 	}
 	@Override
-	public float discount_cost_getter() {
-		// TODO Auto-generated method stub
-		return discount_cost;
+	public double ADDITIONAL_FEE() {
+		return this.ADDITIONAL_FEE;
 	}
 	@Override
-	public void family_cost_setter(int i) {
-		// TODO Auto-generated method stub
-		family_cost= i;
+	public double FREE_TIME() {
+		return this.FREE_TIME;
 	}
 	@Override
-	public int family_cost_getter() {
-		// TODO Auto-generated method stub
-		return family_cost;
+	public double EXCESS_FEE() {
+		return this.EXCESS_FEE;
 	}
-	
+	@Override
+	public double Minit() {
+		return this.minit;
+	}
+	@Override
+	public double Line() {
+		return this.line;
+	}
 }

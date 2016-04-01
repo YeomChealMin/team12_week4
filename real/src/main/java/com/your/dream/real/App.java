@@ -1,4 +1,4 @@
-package com.your.dream.real;
+
 
 /**
  * Hello world!
@@ -12,9 +12,24 @@ public class App
 	}
 	
     public static void main( String[] args ) {
-    	for(String arg : args) {
-		System.out.println("Lego.");
-    		System.out.println("++parameter: " + arg);
+    
+    	BasicPlan b;
+    	AppView _appview =new AppView();
+    	
+    	//while(){
+    	_appview.showProgramStartMSG();
+    	if(_appview.insertPlan()==1){//gold
+    		b=new Gold();
+    	}else{
+    		b=new Silver();
     	}
+    
+    	int number=_appview.insertUsingLine();
+    	float time=_appview.insertUsingTime();
+    	
+    	
+    	Calculator _calcuator = new Calculator(b, number, time);
+    	
+    	_appview.printResult(_calcuator.CalculatorBill());
     }
 }

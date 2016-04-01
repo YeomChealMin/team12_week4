@@ -1,12 +1,13 @@
 package com.your.dream.real;
 public interface BasicPlan {
-	
-	public void cost_setter(float i);
-	public float cost_getter();
-	public void discount_cost_setter(float i);
-	public float discount_cost_getter();
-	public void family_cost_setter(int i);
-	public int family_cost_getter();
-	
-	
+
+	public String plan();
+	public double BASIC_FEE();
+	public double ADDITIONAL_FEE();
+	public double FREE_TIME();
+	public double EXCESS_FEE();
+	public double Minit();
+	public double Line();
+		
 }
+

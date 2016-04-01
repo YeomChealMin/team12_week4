@@ -1,36 +1,27 @@
 package com.your.dream.real;
 public class Calculator {
 	
-	float cost;
-	float discount_cost;
-	int number;
-	float time;
-	int family_cost; 
-	float total = 0;
-	public Calculator(BasicPlan b, int number, float time){
-		cost = b.cost_getter();
-		discount_cost = b.discount_cost_getter();
-		family_cost = b.family_cost_getter();
-		this.number = number;
-		this.time = time;
+	final double FAMILY_DISCOUNTED_FEE=5;
+	
+	public Calculator(){
 	}
 	
-	public float CalculatorBill(){
-		
-		total += cost; 
-		number--;
-		if(number == 1){
-		total += discount_cost;
-		number --;
+	public double CalculatorBill(BasicPlan plan){
+		double rate=0;
+		if(plan.Line()==1){
+			rate+=plan.BASIC_FEE();
+			if(plan.Minit()>plan.FREE_TIME())
+				rate+=(plan.Minit()-plan.FREE_TIME())*plan.EXCESS_FEE();
+		}else if(plan.Line()>=5){
+			rate+=plan.BASIC_FEE()+plan.ADDITIONAL_FEE()*4+FAMILY_DISCOUNTED_FEE*(plan.Line()-5);
+			if(plan.Minit()>plan.FREE_TIME()*plan.Line())
+				rate+=(plan.Minit()-(plan.FREE_TIME()*plan.Line()))*plan.EXCESS_FEE();
+		}else{
+			rate+=plan.BASIC_FEE()+plan.ADDITIONAL_FEE()*(plan.Line()-5);
+			if(plan.Minit()>plan.FREE_TIME()*plan.Line())
+				rate+=(plan.Minit()-(plan.FREE_TIME()*plan.Line()))*plan.EXCESS_FEE();
 		}
-		if (number == 1){
-			total += discount_cost;
-			number --;
-		}
-		if( number != 0){
-			total += family_cost * number;
-		}
-		return total;
-		
+
+		return rate;
 	}
 }
