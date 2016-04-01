@@ -3,9 +3,6 @@ public class Calculator {
 	
 	final double FAMILY_DISCOUNTED_FEE=5;
 	
-	public Calculator(){
-	}
-	
 	public double CalculatorBill(BasicPlan plan){
 		double rate=0;
 		if(plan.Line()==1){
