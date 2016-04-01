@@ -5,18 +5,18 @@ public class Calculator {
 	
 	public double CalculatorBill(BasicPlan plan){
 		double rate=0;
-		if(plan.Line()==1){
-			rate+=plan.BASIC_FEE();
-			if(plan.Minit()>plan.FREE_TIME())
-				rate+=(plan.Minit()-plan.FREE_TIME())*plan.EXCESS_FEE();
-		}else if(plan.Line()>=4){
-			rate+=plan.BASIC_FEE()+plan.ADDITIONAL_FEE()*3+FAMILY_DISCOUNTED_FEE*(plan.Line()-4);
-			if(plan.Minit()>plan.FREE_TIME()*plan.Line())
-				rate+=(plan.Minit()-(plan.FREE_TIME()*plan.Line()))*plan.EXCESS_FEE();
+		if(plan.getLine()==1){
+			rate+=plan.getBasicFee();
+			if(plan.getMinit()>plan.getFreeTime())
+				rate+=(plan.getMinit()-plan.getFreeTime())*plan.getExcessFee();
+		}else if(plan.getLine()>=4){
+			rate+=plan.getBasicFee()+plan.getAdditinalFee()*3+FAMILY_DISCOUNTED_FEE*(plan.getLine()-4);
+			if(plan.getMinit()>plan.getFreeTime()*plan.getLine())
+				rate+=(plan.getMinit()-(plan.getFreeTime()*plan.getLine()))*plan.getExcessFee();
 		}else{
-			rate+=plan.BASIC_FEE()+plan.ADDITIONAL_FEE()*(plan.Line()-1);
-			if(plan.Minit()>plan.FREE_TIME()*plan.Line())
-				rate+=(plan.Minit()-(plan.FREE_TIME()*plan.Line()))*plan.EXCESS_FEE();
+			rate+=plan.getBasicFee()+plan.getAdditinalFee()*(plan.getLine()-1);
+			if(plan.getMinit()>plan.getFreeTime()*plan.getLine())
+				rate+=(plan.getMinit()-(plan.getFreeTime()*plan.getLine()))*plan.getExcessFee();
 		}
 
 		return rate;
