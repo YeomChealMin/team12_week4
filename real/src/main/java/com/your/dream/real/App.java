@@ -1,4 +1,4 @@
-package com.your.dream.real;
+
 
 /**
  * Hello world!
@@ -20,8 +20,8 @@ public class App
     	_appview.showProgramStartMSG();
     	
     
-    	int number=_appview.insertUsingLine();
-    	float time=_appview.insertUsingTime();
+    	double number=_appview.insertUsingLine();
+    	double time=_appview.insertUsingTime();
     	if(_appview.insertPlan()==1){//gold
     		b=new Gold(number,time);
     	}else{
