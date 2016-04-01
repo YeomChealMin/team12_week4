@@ -1,7 +1,8 @@
 package com.your.dream.real;
 
+
 /**
- * Hello world!
+ * main program!
  *
  */
 public class App 
@@ -30,6 +31,7 @@ public class App
     	
     	Calculator _calcuator = new Calculator();
     	
-    	_appview.printResult(_calcuator.CalculatorBill(b.plan(),b.Minit(),b.Line()));
+    	_appview.printResult(_calcuator.CalculatorBill(b));
+    
     }
 }
