@@ -1,36 +1,50 @@
 package com.your.dream.real;
 public class Calculator {
 	
-	float cost;
-	float discount_cost;
-	int number;
-	float time;
-	int family_cost; 
-	float total = 0;
-	public Calculator(BasicPlan b, int number, float time){
-		cost = b.cost_getter();
-		discount_cost = b.discount_cost_getter();
-		family_cost = b.family_cost_getter();
-		this.number = number;
-		this.time = time;
+	final double GOLD_BASIC_FEE=49.95;
+	final double GOLD_ADDITIONAL_FEE=14.5;
+	final double GOLD_FREE_TIME=1000;
+	final double GOLD_EXCESS_FEE=0.45;
+	final double SILVER_BASIC_FEE=29.95;
+	final double SILVER_ADDITIONAL_FEE=21.5;
+	final double SILVER_FREE_TIME=500;
+	final double SILVER_EXCESS_FEE=0.54;
+	final double FAMILY_DISCOUNTED_FEE=5;
+	
+	public Calculator(){
 	}
 	
-	public float CalculatorBill(){
-		
-		total += cost; 
-		number--;
-		if(number == 1){
-		total += discount_cost;
-		number --;
+	public double CalculatorBill(String plan, double minit, int line){
+		double rate=0;
+		if(plan=="Gold"){
+			if(line==1){
+				rate+=GOLD_BASIC_FEE;
+				if(minit>GOLD_FREE_TIME)
+					rate+=(minit-GOLD_FREE_TIME)*GOLD_EXCESS_FEE;
+			}else if(line>=5){
+				rate+=GOLD_BASIC_FEE+GOLD_ADDITIONAL_FEE*4+FAMILY_DISCOUNTED_FEE*(line-5);
+				if(minit>GOLD_FREE_TIME*line)
+					rate+=(minit-(GOLD_FREE_TIME*line))*GOLD_EXCESS_FEE;
+			}else{
+				rate+=GOLD_BASIC_FEE+GOLD_ADDITIONAL_FEE*(line-5);
+				if(minit>GOLD_FREE_TIME*line)
+					rate+=(minit-(GOLD_FREE_TIME*line))*GOLD_EXCESS_FEE;
+			}
+		}else{
+			if(line==1){
+				rate+=SILVER_BASIC_FEE;
+				if(minit>SILVER_FREE_TIME)
+					rate+=(minit-SILVER_FREE_TIME)*SILVER_EXCESS_FEE;
+			}else if(line>=5){
+				rate+=SILVER_BASIC_FEE+SILVER_ADDITIONAL_FEE*4+FAMILY_DISCOUNTED_FEE*(line-5);
+				if(minit>SILVER_FREE_TIME*line)
+					rate+=(minit-(SILVER_FREE_TIME*line))*SILVER_EXCESS_FEE;
+			}else{
+				rate+=SILVER_BASIC_FEE+SILVER_ADDITIONAL_FEE*(line-5);
+				if(minit>SILVER_FREE_TIME*line)
+					rate+=(minit-(SILVER_FREE_TIME*line))*SILVER_EXCESS_FEE;
+			}
 		}
-		if (number == 1){
-			total += discount_cost;
-			number --;
-		}
-		if( number != 0){
-			total += family_cost * number;
-		}
-		return total;
-		
+		return rate;
 	}
 }

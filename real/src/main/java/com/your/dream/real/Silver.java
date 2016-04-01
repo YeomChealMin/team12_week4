@@ -1,40 +1,31 @@
 package com.your.dream.real;
 public class Silver implements BasicPlan	{
 
-	float cost;
-	float discount_cost;
-	int family_cost;
-	int number;
-	float time;
+	final String plan="Silver";
+	private double minit;
+	private double line;
 	
-	public void cost_setter(float i) {
-		// TODO Auto-generated method stub
-		cost = i;
+	public Silver(double aMinit, double aLine){
+		this.minit = aMinit;
+		this.line = aLine;
 	}
 	@Override
-	public float cost_getter() {
-		// TODO Auto-generated method stub
-		return cost;
+	public double getMinit() {
+		return this.minit;
 	}
+
 	@Override
-	public void discount_cost_setter(float i) {
-		// TODO Auto-generated method stub
-		discount_cost= i;
+	public void setMinit(double aMinit) {
+		this.minit=aMinit;
 	}
+
 	@Override
-	public float discount_cost_getter() {
-		// TODO Auto-generated method stub
-		return discount_cost;
+	public double getLine() {
+		return this.line;
 	}
+
 	@Override
-	public void family_cost_setter(int i) {
-		// TODO Auto-generated method stub
-		family_cost= i;
+	public void setLine(double aLine) {
+		this.line = aLine;
 	}
-	@Override
-	public int family_cost_getter() {
-		// TODO Auto-generated method stub
-		return family_cost;
-	}
-	
 }
