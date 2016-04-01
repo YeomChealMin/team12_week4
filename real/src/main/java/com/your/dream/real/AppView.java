@@ -65,7 +65,7 @@ public class AppView {
 				break;
 			} catch(InputMismatchException e){
 				System.out.print("Please input correctly Using-Line with number: ");
-				_scanner.nextLine();		//
+				_scanner.nextLine();
 			}
 		}
 		
@@ -75,5 +75,13 @@ public class AppView {
 	public void printResult(int bill){
 		//Print bill to User
 		System.out.println("Your total charges are $"+bill);
+	}
+	
+	public void printResult(BasicPlan plan, double bill, double discount){
+		System.out.println("[          Bill          ]");
+		System.out.println("Plan: " + plan.plan());
+		System.out.println("BasicMinutes: " + plan.FREE_TIME() + ", YourUsingMinutes: " + plan.Minit());
+		System.out.println("OverMinutes: " + (plan.Minit()-plan.FREE_TIME()));
+		System.out.println("Bill: $" + bill + "Discount: $" + discount);
 	}
 }

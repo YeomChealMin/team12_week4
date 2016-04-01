@@ -1,50 +1,31 @@
 package com.your.dream.real;
 public class Calculator {
 	
-	final double GOLD_BASIC_FEE=49.95;
-	final double GOLD_ADDITIONAL_FEE=14.5;
-	final double GOLD_FREE_TIME=1000;
-	final double GOLD_EXCESS_FEE=0.45;
-	final double SILVER_BASIC_FEE=29.95;
-	final double SILVER_ADDITIONAL_FEE=21.5;
-	final double SILVER_FREE_TIME=500;
-	final double SILVER_EXCESS_FEE=0.54;
 	final double FAMILY_DISCOUNTED_FEE=5;
 	
 	public Calculator(){
 	}
 	
+<<<<<<< HEAD
 	public double CalculatorBill(String plan, double minit, double line){
+=======
+	public double CalculatorBill(BasicPlan plan){
+>>>>>>> 63475b7c7d76980d6128673a57fd4549424c9d60
 		double rate=0;
-		if(plan=="Gold"){
-			if(line==1){
-				rate+=GOLD_BASIC_FEE;
-				if(minit>GOLD_FREE_TIME)
-					rate+=(minit-GOLD_FREE_TIME)*GOLD_EXCESS_FEE;
-			}else if(line>=5){
-				rate+=GOLD_BASIC_FEE+GOLD_ADDITIONAL_FEE*4+FAMILY_DISCOUNTED_FEE*(line-5);
-				if(minit>GOLD_FREE_TIME*line)
-					rate+=(minit-(GOLD_FREE_TIME*line))*GOLD_EXCESS_FEE;
-			}else{
-				rate+=GOLD_BASIC_FEE+GOLD_ADDITIONAL_FEE*(line-5);
-				if(minit>GOLD_FREE_TIME*line)
-					rate+=(minit-(GOLD_FREE_TIME*line))*GOLD_EXCESS_FEE;
-			}
+		if(plan.Line()==1){
+			rate+=plan.BASIC_FEE();
+			if(plan.Minit()>plan.FREE_TIME())
+				rate+=(plan.Minit()-plan.FREE_TIME())*plan.EXCESS_FEE();
+		}else if(plan.Line()>=4){
+			rate+=plan.BASIC_FEE()+plan.ADDITIONAL_FEE()*3+FAMILY_DISCOUNTED_FEE*(plan.Line()-4);
+			if(plan.Minit()>plan.FREE_TIME()*plan.Line())
+				rate+=(plan.Minit()-(plan.FREE_TIME()*plan.Line()))*plan.EXCESS_FEE();
 		}else{
-			if(line==1){
-				rate+=SILVER_BASIC_FEE;
-				if(minit>SILVER_FREE_TIME)
-					rate+=(minit-SILVER_FREE_TIME)*SILVER_EXCESS_FEE;
-			}else if(line>=5){
-				rate+=SILVER_BASIC_FEE+SILVER_ADDITIONAL_FEE*4+FAMILY_DISCOUNTED_FEE*(line-5);
-				if(minit>SILVER_FREE_TIME*line)
-					rate+=(minit-(SILVER_FREE_TIME*line))*SILVER_EXCESS_FEE;
-			}else{
-				rate+=SILVER_BASIC_FEE+SILVER_ADDITIONAL_FEE*(line-5);
-				if(minit>SILVER_FREE_TIME*line)
-					rate+=(minit-(SILVER_FREE_TIME*line))*SILVER_EXCESS_FEE;
-			}
+			rate+=plan.BASIC_FEE()+plan.ADDITIONAL_FEE()*(plan.Line()-5);
+			if(plan.Minit()>plan.FREE_TIME()*plan.Line())
+				rate+=(plan.Minit()-(plan.FREE_TIME()*plan.Line()))*plan.EXCESS_FEE();
 		}
+
 		return rate;
 	}
 }
