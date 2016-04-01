@@ -1,10 +1,10 @@
 package com.your.dream.real;
 public interface BasicPlan {
 
-	public void getMinit();
-	public double setMinit(double aMinit);
-	public void getLine();
-	public double setLine(double aLine);
+	public double getMinit();
+	public void setMinit(double aMinit);
+	public double getLine();
+	public void setLine(double aLine);
 		
 }
 
