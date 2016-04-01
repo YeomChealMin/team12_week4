@@ -11,14 +11,11 @@ public class App
     	appview.showProgramStartMSG();
     	double line=appview.insertUsingLine();
     	double time=appview.insertUsingTime();
-    	if(appview.insertPlan()==1){//gold
-    		b=new Gold(time,line);
-    	}else{
-    		b=new Silver(time,line);
-    	}
+    	b=new Gold(time,line);
     	
-    	Calculator calcuator = new Calculator();
-    	appview.printResult(b,calcuator.CalculatorBill(b));
+    	Calculator calculator = new Calculator();
+    	appview.printResult(b,calculator.CalculatorBill(b));
     	  
     }
 }
+
