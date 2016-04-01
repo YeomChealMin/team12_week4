@@ -1,7 +1,11 @@
 package com.your.dream.real;
 public class Silver implements BasicPlan	{
 
-	final String plan="Silver";
+	final String PLAN="Silver";
+	final double BASIC_FEE=29.95;
+	final double ADDITIONAL_FEE=21.5;
+	final double FREE_TIME=500;
+	final double EXCESS_FEE=0.54;
 	private double minit;
 	private double line;
 	
@@ -10,22 +14,31 @@ public class Silver implements BasicPlan	{
 		this.line = aLine;
 	}
 	@Override
-	public double getMinit() {
+	public String plan() {
+		return this.PLAN;
+	}
+	@Override
+	public double BASIC_FEE() {
+		return this.BASIC_FEE;
+	}
+	@Override
+	public double ADDITIONAL_FEE() {
+		return this.ADDITIONAL_FEE;
+	}
+	@Override
+	public double FREE_TIME() {
+		return this.FREE_TIME;
+	}
+	@Override
+	public double EXCESS_FEE() {
+		return this.EXCESS_FEE;
+	}
+	@Override
+	public double Minit() {
 		return this.minit;
 	}
-
 	@Override
-	public void setMinit(double aMinit) {
-		this.minit=aMinit;
-	}
-
-	@Override
-	public double getLine() {
+	public double Line() {
 		return this.line;
-	}
-
-	@Override
-	public void setLine(double aLine) {
-		this.line = aLine;
 	}
 }
