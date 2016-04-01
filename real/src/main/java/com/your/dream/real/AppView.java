@@ -72,9 +72,9 @@ public class AppView {
 		return iReturn;
 	}
 	
-	public void printResult(int bill){
+	public void printResult(double d){
 		//Print bill to User
-		System.out.println("Your total charges are $"+bill);
+		System.out.println("Your total charges are $"+d);
 	}
 	
 	public void printResult(BasicPlan plan, double bill, double discount){
