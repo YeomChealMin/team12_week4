@@ -3,24 +3,24 @@ package com.your.dream.real;
 public class Manager {
 	
 	int plan, usingTime, usingLine;
-	AppView _appView;
+	AppView appView;
 	
 	public Manager(){
-		_appView = new AppView();
+		appView = new AppView();
 	}
 	
 	public void run(){
-		_appView.showProgramStartMSG();
+		appView.showProgramStartMSG();
 		insertData();
 	}
 	
 	public void insertData(){
-		plan = _appView.insertPlan();
-		usingTime = _appView.insertUsingTime();
-		usingLine = _appView.insertUsingLine();
+		plan = appView.insertPlan();
+		usingTime = appView.insertUsingTime();
+		usingLine = appView.insertUsingLine();
 	}
 	
-	public void output(int bill){
-		_appView.printResult(bill);
+	public void output(double bill){
+		appView.printResult(bill);
 	}
 }
