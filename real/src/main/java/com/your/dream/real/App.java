@@ -1,5 +1,5 @@
 
-
+package com.your.dream.real;
 /**
  * Hello world!
  *
@@ -20,16 +20,17 @@ public class App
     	_appview.showProgramStartMSG();
     	
     
-    	double number=_appview.insertUsingLine();
+    	double line=_appview.insertUsingLine();
     	double time=_appview.insertUsingTime();
     	if(_appview.insertPlan()==1){//gold
-    		b=new Gold(number,time);
+    		b=new Gold(time,line);
     	}else{
-    		b=new Silver(number,time);
+    		b=new Silver(time,line);
     	}
     	
     	Calculator _calcuator = new Calculator();
     	
-    	_appview.printResult(_calcuator.CalculatorBill(b.plan(),b.Minit(),b.Line()));
+    	_appview.printResult(_calcuator.CalculatorBill(b));
+    
     }
 }
