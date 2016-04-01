@@ -1,4 +1,4 @@
-
+package com.your.dream.real;
 
 /**
  * Hello world!
@@ -18,18 +18,18 @@ public class App
     	
     	//while(){
     	_appview.showProgramStartMSG();
-    	if(_appview.insertPlan()==1){//gold
-    		b=new Gold();
-    	}else{
-    		b=new Silver();
-    	}
+    	
     
     	int number=_appview.insertUsingLine();
     	float time=_appview.insertUsingTime();
+    	if(_appview.insertPlan()==1){//gold
+    		b=new Gold(number,time);
+    	}else{
+    		b=new Silver(number,time);
+    	}
     	
+    	Calculator _calcuator = new Calculator();
     	
-    	Calculator _calcuator = new Calculator(b, number, time);
-    	
-    	_appview.printResult(_calcuator.CalculatorBill());
+    	_appview.printResult(_calcuator.CalculatorBill(b.plan(),b.Minit(),b.Line()));
     }
 }

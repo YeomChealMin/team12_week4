@@ -14,7 +14,7 @@ public class Calculator {
 	public Calculator(){
 	}
 	
-	public double CalculatorBill(String plan, double minit, int line){
+	public double CalculatorBill(String plan, double minit, double line){
 		double rate=0;
 		if(plan=="Gold"){
 			if(line==1){
