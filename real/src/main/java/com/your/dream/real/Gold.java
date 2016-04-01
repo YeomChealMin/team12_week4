@@ -13,27 +13,27 @@ public class Gold implements BasicPlan	{
 		this.line = aLine;
 	}
 	@Override
-	public double BASIC_FEE() {
+	public double getBasicFee() {
 		return this.basicFee;
 	}
 	@Override
-	public double ADDITIONAL_FEE() {
+	public double getAdditinalFee() {
 		return this.additionalFee;
 	}
 	@Override
-	public double FREE_TIME() {
+	public double getFreeTime() {
 		return this.freeTime;
 	}
 	@Override
-	public double EXCESS_FEE() {
+	public double getExcessFee() {
 		return this.excessFee;
 	}
 	@Override
-	public double Minit() {
+	public double getMinit() {
 		return this.minit;
 	}
 	@Override
-	public double Line() {
+	public double getLine() {
 		return this.line;
 	}
 }
