@@ -6,10 +6,7 @@ public class AppView {
 
 	
 	private static Logger MYLOG=Logger.getLogger(AppView.class.getName());
-	public AppView(){
-	
-	}
-	
+
 	public void showProgramStartMSG(){
 		StringBuilder startmsg=new StringBuilder();
 		startmsg.append("ActualCoding(Team_12)_Project: Bill Calculator is starting\n");
