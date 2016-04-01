@@ -1,10 +1,10 @@
 package com.your.dream.real;
 public class Gold implements BasicPlan	{
 
-	final double BASIC_FEE=49.95;
-	final double ADDITIONAL_FEE=14.5;
-	final double FREE_TIME=1000;
-	final double EXCESS_FEE=0.45;
+	final double basicFee=49.95;
+	final double additionalFee=14.5;
+	final double freeTime=1000;
+	final double excessFee=0.45;
 	private double minit;
 	private double line;
 	
