@@ -26,6 +26,7 @@ public class AppView {
 				break;
 			} catch(Exception e){
 				insertplan.append("Please input correctly(num[1 or 2]): ");
+				LOGGER.info(e.getMessage());
 			}
 		}
 			MYLOG.log(Level.INFO, insertplan.toString());
@@ -44,7 +45,7 @@ public class AppView {
 				break;
 			} catch(Exception e){
 				insertut.append("Please input Using-Time with number(unit: minute): ");
-			
+				LOGGER.info(e.getMessage());
 			}
 		}
 				MYLOG.log(Level.INFO, insertut.toString());
@@ -63,7 +64,7 @@ public class AppView {
 				break;
 			} catch(Exception e){
 				insertul.append("Please input correctly Using-Line with number: ");
-				
+				LOGGER.info(e.getMessage());
 			}
 		}
 			MYLOG.log(Level.INFO, insertul.toString());
