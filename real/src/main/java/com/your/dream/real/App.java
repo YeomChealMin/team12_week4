@@ -24,7 +24,7 @@ public class App
     	}
     	
     	Calculator calcuator = new Calculator();
-    	
+    	appview.printResult(b);
     	appview.printResult(calcuator.CalculatorBill(b));
     
     }
