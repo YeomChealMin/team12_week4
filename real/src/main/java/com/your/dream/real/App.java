@@ -1,3 +1,4 @@
+package com.your.dream.real;
 public class App 
 {
 	private App() 
