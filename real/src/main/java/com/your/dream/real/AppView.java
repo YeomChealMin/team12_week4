@@ -73,7 +73,11 @@ public class AppView {
 
 		return iReturn;
 	}
-	
+		public void printResult(double bill){
+		StringBuilder printre=new StringBuilder();
+		
+		MYLOG.log(Level.INFO, printre.toString());
+	}
 	public void printResult(BasicPlan plan,double bill){
 		StringBuilder printre=new StringBuilder();
 		printre.append("[          Bill          ]\n");
