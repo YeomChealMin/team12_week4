@@ -1,7 +1,6 @@
 package com.your.dream.real;
 public interface BasicPlan {
 
-	public String plan();
 	public double BASIC_FEE();
 	public double ADDITIONAL_FEE();
 	public double FREE_TIME();
