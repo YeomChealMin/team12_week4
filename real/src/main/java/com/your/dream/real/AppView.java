@@ -17,12 +17,22 @@ public class AppView {
 		System.out.println("Please insert Data");
 	}
 	
-	public void insertData(){
+	public int insertPlan(){
 		System.out.print("What's your using Plan?(Silver:1, Gold:2): ");
-		_scanner.nextInt();
+		return _scanner.nextInt();
+	}
+	
+	public int insertUsingTime(){
 		System.out.print("How much using time?(unit: second): ");
-		_scanner.nextInt();
+		return _scanner.nextInt();
+	}
+	
+	public int insertUsingLine(){
 		System.out.print("What's your using Line?");
-		_scanner.nextInt();
+		return _scanner.nextInt();
+	}
+	
+	public void printResult(int bill){
+		System.out.println("Your total charges are $"+bill);
 	}
 }
