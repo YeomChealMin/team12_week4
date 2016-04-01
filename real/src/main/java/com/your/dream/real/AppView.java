@@ -72,7 +72,7 @@ public class AppView {
 		return iReturn;
 	}
 	
-	public void printResult(int bill){
+	public void printResult(double bill){
 		//Print bill to User
 		System.out.println("Your total charges are $"+bill);
 	}
