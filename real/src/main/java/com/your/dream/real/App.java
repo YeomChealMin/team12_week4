@@ -11,7 +11,7 @@ public class App
     public static void main( String[] args ) {
     
     	BasicPlan b;
-    	AppView _appview =new AppView();
+    	AppView appview =new AppView();
     	
     
     	double line=2;
@@ -23,9 +23,9 @@ public class App
     		b=new Silver(time,line);
     	}
     	
-    	Calculator _calcuator = new Calculator();
+    	Calculator calcuator = new Calculator();
     	
-    	_appview.printResult(_calcuator.CalculatorBill(b));
+    	appview.printResult(calcuator.CalculatorBill(b));
     
     }
 }
