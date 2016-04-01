@@ -74,19 +74,13 @@ public class AppView {
 		return iReturn;
 	}
 	
-	public void printResult(double bill){
-		StringBuilder printre=new StringBuilder();
-		printre.append("Your total charges are $"+bill);
-		MYLOG.log(Level.INFO, printre.toString());
-	}
-	
-	public void printResult(BasicPlan plan){
+	public void printResult(BasicPlan plan,double bill){
 		StringBuilder printre=new StringBuilder();
 		printre.append("[          Bill          ]\n");
 		printre.append("Plan: " + plan.plan());
 		printre.append("BasicMinutes: " + plan.FREE_TIME() + ", YourUsingMinutes: " + plan.Minit()+"\n");
 		printre.append("OverMinutes: " + (plan.Minit()-plan.FREE_TIME())+"\n");
-		
+		printre.append("Your total charges are $"+bill);
 		MYLOG.log(Level.INFO, printre.toString());
 	
 	}
