@@ -1,36 +1,20 @@
 package com.your.dream.real;
 public class Calculator {
 	
-	float cost;
-	float discount_cost;
-	int number;
-	float time;
-	int family_cost; 
-	float total = 0;
-	public Calculator(BasicPlan b, int number, float time){
-		cost = b.cost_getter();
-		discount_cost = b.discount_cost_getter();
-		family_cost = b.family_cost_getter();
-		this.number = number;
-		this.time = time;
+	final double GOLD_BASIC_RATE=49.95;
+	final double GOLD_ADDITIONAL_FEE=14.5;
+	final double GOLD_FREE_TIME=1000;
+	final double GOLD_EXCESS_FEE=0.45;
+	final double SILVER_BASIC_RATE=29.95;
+	final double SILVER_ADDITIONAL_FEE=21.5;
+	final double SILVER_FREE_TIME=500;
+	final double SILVER_EXCESS_FEE=0.54;
+	final double FAMILY_DISCOUNT=5;
+	
+	public Calculator(){
 	}
 	
 	public float CalculatorBill(){
-		
-		total += cost; 
-		number--;
-		if(number == 1){
-		total += discount_cost;
-		number --;
-		}
-		if (number == 1){
-			total += discount_cost;
-			number --;
-		}
-		if( number != 0){
-			total += family_cost * number;
-		}
-		return total;
-		
+
 	}
 }
