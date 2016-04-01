@@ -1,10 +1,5 @@
 package com.your.dream.real;
-
-
-
-
 import java.util.logging.Logger;
-import java.util.InputMismatchException;
 import java.util.logging.Level;
 
 public class AppView {
@@ -32,7 +27,7 @@ public class AppView {
 			try{
 				iReturn = 1;
 				break;
-			} catch(InputMismatchException e){
+			} catch(Exception e){
 				insertplan.append("Please input correctly(num[1 or 2]): ");
 			}
 		}
@@ -50,7 +45,7 @@ public class AppView {
 			try{
 				iReturn = 1000;
 				break;
-			} catch(InputMismatchException e){
+			} catch(Exception e){
 				insertut.append("Please input Using-Time with number(unit: minute): ");
 			
 			}
@@ -69,7 +64,7 @@ public class AppView {
 			try{
 				iReturn = 1;
 				break;
-			} catch(InputMismatchException e){
+			} catch(Exception e){
 				insertul.append("Please input correctly Using-Line with number: ");
 				
 			}
