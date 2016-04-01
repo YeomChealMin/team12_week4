@@ -16,10 +16,10 @@ int total =0;
 int silver_rate;
 int gold_rate;
     	for(String arg : args) {
-		System.out.println("전화요금 관리 시스템을 시작합니다.");
+		System.out.println("Lego.");
     		System.out.println("++parameter: " + arg);
 		
-		System.out.println("총 전화요금은 "+ total +"입니다.");
+		System.out.println("Total fare is "+ total +".");
     	}
     }
 }

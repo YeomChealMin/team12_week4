@@ -4,14 +4,12 @@ package com.your.dream.real;
  * Calcualtor
  *
  */
-public class App 
+public class Calculator 
 {
 	
-	private App() 
+	private Calculator()
 	{
 		// do not create App class directly test2
 	}
 	
-    	}
-    }
 }
