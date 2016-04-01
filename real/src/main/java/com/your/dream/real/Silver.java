@@ -1,7 +1,6 @@
 package com.your.dream.real;
 public class Silver implements BasicPlan	{
 
-	final String PLAN="Silver";
 	final double BASIC_FEE=29.95;
 	final double ADDITIONAL_FEE=21.5;
 	final double FREE_TIME=500;
