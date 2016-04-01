@@ -12,10 +12,7 @@ public class Silver implements BasicPlan	{
 		this.minit = aMinit;
 		this.line = aLine;
 	}
-	@Override
-	public String plan() {
-		return this.plan;
-	}
+	
 	@Override
 	public double BASIC_FEE() {
 		return this.basicFee;
