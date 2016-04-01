@@ -1,6 +1,10 @@
 package com.your.dream.real;
 public class Silver implements BasicPlan	{
 
+	final double basicFee=29.95;
+	final double additionalFee=21.5;
+	final double freeTime=500;
+	final double excessFee=0.54;
 	private double minit;
 	private double line;
 	
@@ -11,19 +15,19 @@ public class Silver implements BasicPlan	{
 	
 	@Override
 	public double getBasicFee() {
-		return 29.95;
+		return this.basicFee;
 	}
 	@Override
 	public double getAdditinalFee() {
-		return 21.5;
+		return this.additionalFee;
 	}
 	@Override
 	public double getFreeTime() {
-		return 500;
+		return this.freeTime;
 	}
 	@Override
 	public double getExcessFee() {
-		return 0.54;
+		return this.excessFee;
 	}
 	@Override
 	public double getMinit() {
