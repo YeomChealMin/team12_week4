@@ -17,13 +17,11 @@ public class App
     	BasicPlan b;
     	AppView _appview =new AppView();
     	
-    	//while(){
-    	_appview.showProgramStartMSG();
-    	
     
-    	double line=_appview.insertUsingLine();
-    	double time=_appview.insertUsingTime();
-    	if(_appview.insertPlan()==1){//gold
+    	double line=2;
+    	double time=400;
+    	int plan=1;
+    	if(plan==1){
     		b=new Gold(time,line);
     	}else{
     		b=new Silver(time,line);
