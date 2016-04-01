@@ -1,78 +1,98 @@
 package com.your.dream.real;
 
-import java.util.*;
+
+
+
+import java.util.logging.Logger;
+import java.util.InputMismatchException;
+import java.util.logging.Level;
 
 public class AppView {
 
-	private Scanner _scanner;
 	
+	private static Logger MYLOG=Logger.getLogger(AppView.class.getName());
 	public AppView(){
-		_scanner = new Scanner(System.in);
+	
 	}
 	
 	public void showProgramStartMSG(){
-		System.out.println("ActualCoding(Team_12)_Project: Bill Calculator is starting");
-		System.out.println("Please insert Data");
+		StringBuilder startmsg=new StringBuilder();
+		startmsg.append("ActualCoding(Team_12)_Project: Bill Calculator is starting\n");
+		startmsg.append("Please insert Data");
+		MYLOG.log(Level.INFO, startmsg.toString());
 	}
 	
 	public int insertPlan(){
-		int iReturn = 0;
-		System.out.print("What's your using Plan?(Gold:1, Silver:2): ");
+		int iReturn = 1;
+		StringBuilder insertplan=new StringBuilder();
+		insertplan.append("What's your using Plan?(Gold:1, Silver:2): Gold");
+		
 		
 		while(true){
 			try{
-				iReturn = _scanner.nextInt();
+				iReturn = 1;
 				break;
 			} catch(InputMismatchException e){
-				System.out.print("Please input correctly(num[1 or 2]): ");
-				_scanner.nextLine();
+				insertplan.append("Please input correctly(num[1 or 2]): ");
 			}
 		}
-		
+			MYLOG.log(Level.INFO, insertplan.toString());
+
 		return iReturn;
 	}
 	
 	public int insertUsingTime(){
 		int iReturn = 0;
-		System.out.print("How much using time?(unit: minute): ");
+		StringBuilder insertut=new StringBuilder();
+		insertut.append("How much using time?(unit: minute): 1000");
+
 		while(true){
 			try{
-				iReturn = _scanner.nextInt();
+				iReturn = 1000;
 				break;
 			} catch(InputMismatchException e){
-				System.out.print("Please input Using-Time with number(unit: minute): ");
-				_scanner.nextLine();
+				insertut.append("Please input Using-Time with number(unit: minute): ");
+			
 			}
 		}
-		
+				MYLOG.log(Level.INFO, insertut.toString());
+
 		return iReturn;
 	}
 	
 	public int insertUsingLine(){
-		int iReturn = 0;
-		System.out.print("What's your using Line?");
+		int iReturn = 2;
+		StringBuilder insertul=new StringBuilder();
+		insertul.append("What's your using Line?");
+		
 		while(true){
 			try{
-				iReturn = _scanner.nextInt();
+				iReturn = 1;
 				break;
 			} catch(InputMismatchException e){
-				System.out.print("Please input correctly Using-Line with number: ");
-				_scanner.nextLine();
+				insertul.append("Please input correctly Using-Line with number: ");
+				
 			}
 		}
-		
+			MYLOG.log(Level.INFO, insertul.toString());
+
 		return iReturn;
 	}
 	
 	public void printResult(double bill){
-		System.out.println("Your total charges are $"+bill);
+		StringBuilder printre=new StringBuilder();
+		printre.append("Your total charges are $"+bill);
+		MYLOG.log(Level.INFO, printre.toString());
 	}
 	
-	public void printResult(BasicPlan plan, double bill, double discount){
-		System.out.println("[          Bill          ]");
-		System.out.println("Plan: " + plan.plan());
-		System.out.println("BasicMinutes: " + plan.FREE_TIME() + ", YourUsingMinutes: " + plan.Minit());
-		System.out.println("OverMinutes: " + (plan.Minit()-plan.FREE_TIME()));
-		System.out.println("Bill: $" + bill + "Discount: $" + discount);
+	public void printResult(BasicPlan plan){
+		StringBuilder printre=new StringBuilder();
+		printre.append("[          Bill          ]\n");
+		printre.append("Plan: " + plan.plan());
+		printre.append("BasicMinutes: " + plan.FREE_TIME() + ", YourUsingMinutes: " + plan.Minit()+"\n");
+		printre.append("OverMinutes: " + (plan.Minit()-plan.FREE_TIME())+"\n");
+		
+		MYLOG.log(Level.INFO, printre.toString());
+	
 	}
 }
