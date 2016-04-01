@@ -12,8 +12,8 @@ public class Calculator {
 			rate+=plan.BASIC_FEE();
 			if(plan.Minit()>plan.FREE_TIME())
 				rate+=(plan.Minit()-plan.FREE_TIME())*plan.EXCESS_FEE();
-		}else if(plan.Line()>=5){
-			rate+=plan.BASIC_FEE()+plan.ADDITIONAL_FEE()*4+FAMILY_DISCOUNTED_FEE*(plan.Line()-5);
+		}else if(plan.Line()>=4){
+			rate+=plan.BASIC_FEE()+plan.ADDITIONAL_FEE()*3+FAMILY_DISCOUNTED_FEE*(plan.Line()-4);
 			if(plan.Minit()>plan.FREE_TIME()*plan.Line())
 				rate+=(plan.Minit()-(plan.FREE_TIME()*plan.Line()))*plan.EXCESS_FEE();
 		}else{
