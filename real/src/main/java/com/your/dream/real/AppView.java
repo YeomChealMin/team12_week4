@@ -21,30 +21,6 @@ public class AppView {
 		mLog.log(Level.INFO, startmsg.toString());
 	}
 
-	public int insertPlan() {
-		StringBuilder insertplan = new StringBuilder();
-		insertplan.append("What's your using Plan?(Gold:1, Silver:2): Gold");
-		mLog.log(Level.INFO, insertplan.toString());
-
-		return 1;
-	}
-
-	public int insertUsingTime() {
-		StringBuilder insertut = new StringBuilder();
-		insertut.append("How much using time?(unit: minute): 1000");
-		mLog.log(Level.INFO, insertut.toString());
-
-		return 1000;
-	}
-
-	public int insertUsingLine() {
-		StringBuilder insertul = new StringBuilder();
-		insertul.append("What's your using Line?");
-		mLog.log(Level.INFO, insertul.toString());
-
-		return 2;
-	}
-
 	public void printResult(BasicPlan plan, double bill) {
 		StringBuilder printre = new StringBuilder();
 		printre.append("[          Bill          ]\n");
