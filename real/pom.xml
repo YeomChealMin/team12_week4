@@ -39,7 +39,6 @@
         <directory>src/main/resources-${env}</directory>
       </resource>
     </resources>
-    </build>
     
     <plugins>
       <plugin>
@@ -49,19 +48,19 @@
           <target>1.8</target>
         </configuration>
       </plugin>
-       <plugin>
- +        <groupId>org.jacoco</groupId>
- +        <artifactId>jacoco-maven-plugin</artifactId>
- +        <version>0.7.6.201602180812</version>
- +        <executions>
- +          <execution>
- +            <id>default-prepare-agent</id>
- +            <goals>
- +              <goal>prepare-agent</goal>
- +            </goals>
- +          </execution>
- +        </executions>
- +      </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.7.6.201602180812</version>
+        <executions>
+          <execution>
+            <id>default-prepare-agent</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
      <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
@@ -75,14 +74,9 @@
                   <encoding>UTF-8</encoding>
             </configuration>
       </plugin>
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.7.7-SNAPSHOT</version>
-      </plugin>
    </plugins>
    
-  
+  </build>
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
