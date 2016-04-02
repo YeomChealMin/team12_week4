@@ -7,7 +7,7 @@ import org.junit.Test;
  */
 public class AppTest {
 	@Test
-	public void testMainIsWorking() {
+	public void testMainIsWorking()  throws IOException {
 		App.main(new String[] { "This is test!" });
 	}
 }
