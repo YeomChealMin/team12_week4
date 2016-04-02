@@ -1,10 +1,14 @@
 package com.your.dream.real;
+
+import java.io.IOException;
+import java.util.List;
+
 public class App 
 {
 	private App() 
 	{
 	}	
-    public static void main( String[] args ) {
+    public static void main( String[] args ) throws IOException {
     
     	BasicPlan b;
     	AppView appview =new AppView();
@@ -15,7 +19,12 @@ public class App
     	
     	Calculator calculator = new Calculator();
     	appview.printResult(b,calculator.calculatorBill(b));
-    	  
+    	
+    	List<BasicPlan> parseData = appview.parseDataFromFile("Data.txt");
+		
+    	if(parseData != null)
+    		for(int i=0; i<parseData.size(); i++)
+    			appview.printResult(parseData.get(i), calculator.calculatorBill(parseData.get(i)));
     }
 }
 
