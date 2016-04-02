@@ -1,7 +1,7 @@
 package com.your.dream.real;
 public class Calculator {
 	
-	static final double Family_Discount_Fee=5;
+	static final double FAMILY_DISCOUNT_FEE=5;
 	
 	public double calculatorBill(BasicPlan plan){
 		double rate=0;
@@ -10,7 +10,7 @@ public class Calculator {
 			if(plan.getMinit()>plan.getFreeTime())
 				rate+=(plan.getMinit()-plan.getFreeTime())*plan.getExcessFee();
 		}else if(plan.getLine()>=4){
-			rate+=plan.getBasicFee()+plan.getAdditinalFee()*3+Family_Discount_Fee*(plan.getLine()-4);
+			rate+=plan.getBasicFee()+plan.getAdditinalFee()*3+FAMILY_DISCOUNT_FEE*(plan.getLine()-4);
 			if(plan.getMinit()>plan.getFreeTime()*plan.getLine())
 				rate+=(plan.getMinit()-(plan.getFreeTime()*plan.getLine()))*plan.getExcessFee();
 		}else{
