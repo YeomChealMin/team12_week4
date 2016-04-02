@@ -14,7 +14,7 @@ public class App
     	b=new Gold(time,line);
     	
     	Calculator calculator = new Calculator();
-    	appview.printResult(b,calculator.CalculatorBill(b));
+    	appview.printResult(b,calculator.calculatorBill(b));
     	  
     }
 }
