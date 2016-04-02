@@ -5,13 +5,13 @@ import java.util.logging.Level;
 public class AppView {
 
 	
-	private static Logger MYLOG=Logger.getLogger(AppView.class.getName());
+	private static Logger mLog=Logger.getLogger(AppView.class.getName());
 
 	public void showProgramStartMSG(){
 		StringBuilder startmsg=new StringBuilder();
 		startmsg.append("ActualCoding(Team_12)_Project: Bill Calculator is starting\n");
 		startmsg.append("Please insert Data");
-		MYLOG.log(Level.INFO, startmsg.toString());
+		mLog.log(Level.INFO, startmsg.toString());
 	}
 	
 	public int insertPlan(){
@@ -25,7 +25,7 @@ public class AppView {
 				break;
 		
 		}
-			MYLOG.log(Level.INFO, insertplan.toString());
+			mLog.log(Level.INFO, insertplan.toString());
 
 		return iReturn;
 	}
@@ -40,7 +40,7 @@ public class AppView {
 				break;
 		
 		}
-				MYLOG.log(Level.INFO, insertut.toString());
+				mLog.log(Level.INFO, insertut.toString());
 
 		return iReturn;
 	}
@@ -56,7 +56,7 @@ public class AppView {
 				break;
 		
 		}
-			MYLOG.log(Level.INFO, insertul.toString());
+			mLog.log(Level.INFO, insertul.toString());
 
 		return iReturn;
 	}
@@ -67,7 +67,7 @@ public class AppView {
 		printre.append("BasicMinutes: " + plan.getFreeTime() + ", YourUsingMinutes: " + plan.getMinit()+"\n");
 		printre.append("OverMinutes: " + (plan.getMinit()-plan.getFreeTime())+"\n");
 		printre.append("Your total charges are $"+bill);
-		MYLOG.log(Level.INFO, printre.toString());
+		mLog.log(Level.INFO, printre.toString());
 	
 	}
 }
