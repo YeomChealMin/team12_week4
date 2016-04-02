@@ -18,7 +18,6 @@ public class App
     	b=new Gold(time,line);
     	
     	Calculator calculator = new Calculator();
-    	appview.printResult(b,calculator.calculatorBill(b));
     	
     	List<BasicPlan> parseData = appview.parseDataFromFile("Data.txt");
 		
