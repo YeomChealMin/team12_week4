@@ -24,6 +24,7 @@ public class AppView {
 	public void printResult(BasicPlan plan, double bill) {
 		StringBuilder printre = new StringBuilder();
 		printre.append("[          Bill          ]\n");
+		printre.append("Plan: " + plan.getClass().getSimpleName() + ", line: " + plan.getLine() + "\n");
 		printre.append("BasicMinutes: " + plan.getFreeTime() + ", YourUsingMinutes: " + plan.getMinit() + "\n");
 		printre.append("OverMinutes: " + (plan.getMinit() - plan.getFreeTime()) + "\n");
 		printre.append("Your total charges are $" + bill);
