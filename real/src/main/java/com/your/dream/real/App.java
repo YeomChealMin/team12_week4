@@ -10,7 +10,6 @@ public class App
 	}	
     public static void main( String[] args ) throws IOException {
     
-    	BasicPlan b;
     	AppView appview =new AppView();
     	appview.showProgramStartMSG();
     	
