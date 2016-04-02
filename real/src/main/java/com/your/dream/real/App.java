@@ -13,9 +13,6 @@ public class App
     	BasicPlan b;
     	AppView appview =new AppView();
     	appview.showProgramStartMSG();
-    	double line=appview.insertUsingLine();
-    	double time=appview.insertUsingTime();
-    	b=new Gold(time,line);
     	
     	Calculator calculator = new Calculator();
     	
