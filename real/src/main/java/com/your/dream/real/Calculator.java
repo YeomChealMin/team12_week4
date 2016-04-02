@@ -1,9 +1,9 @@
 package com.your.dream.real;
 public class Calculator {
 	
-	final double familyDiscountFee=5;
+	static final double familyDiscountFee=5;
 	
-	public double CalculatorBill(BasicPlan plan){
+	public double calculatorBill(BasicPlan plan){
 		double rate=0;
 		if(plan.getLine()==1){
 			rate+=plan.getBasicFee();
