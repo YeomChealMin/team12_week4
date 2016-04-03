@@ -13,3 +13,4 @@ public class Calculator {
 			fee+=(plan.getMinit()-(plan.getFreeTime()*plan.getLine()))*plan.getExcessFee();//add excess fee where excessed minit
 		return fee;//return total fee
 	}
+}
